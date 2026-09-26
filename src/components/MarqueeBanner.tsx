@@ -23,7 +23,7 @@ const DEFAULT_ITEMS = [
 
 export const MarqueeBanner: React.FC<MarqueeBannerProps> = ({
   items = DEFAULT_ITEMS,
-  speed = 0.45,
+  speed = 0.12,
   direction = 'left',
   className = ''
 }) => {
@@ -35,7 +35,7 @@ export const MarqueeBanner: React.FC<MarqueeBannerProps> = ({
     stiffness: 400
   });
 
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 0.35], {
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 0.1], {
     clamp: true
   });
 
@@ -51,7 +51,7 @@ export const MarqueeBanner: React.FC<MarqueeBannerProps> = ({
     
     // Accelerate slightly on scroll
     if (velocityFactor.get() !== 0) {
-      moveBy += (direction === 'left' ? -1 : 1) * velocityFactor.get() * 0.25;
+      moveBy += (direction === 'left' ? -1 : 1) * velocityFactor.get() * 0.1;
     }
 
     baseX.set(baseX.get() + moveBy);

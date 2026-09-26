@@ -632,7 +632,7 @@ function Home() {
 
         {/* KINETIC MARQUEE TICKER 1 */}
         <div className="mb-24 -mx-6 lg:-mx-12">
-          <MarqueeBanner speed={0.45} />
+          <MarqueeBanner speed={0.12} />
         </div>
 
         {/* PROJECTS SECTION */}
@@ -670,7 +670,7 @@ function Home() {
 
         {/* KINETIC MARQUEE TICKER 2 (REVERSE DIRECTION) */}
         <div className="mb-24 -mx-6 lg:-mx-12">
-          <MarqueeBanner speed={0.45} direction="right" />
+          <MarqueeBanner speed={0.12} direction="right" />
         </div>
 
         {/* 3D WEBGL SMOOTH-SCROLL PROJECT SHOWCASE / TECHNICAL ARCHIVE */}
