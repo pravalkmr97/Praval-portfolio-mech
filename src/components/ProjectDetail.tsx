@@ -1349,14 +1349,9 @@ export default function ProjectDetail() {
                 {project.title.split(' ').map((word, i, words) => {
                   if (word === '&') {
                     return (
-                      <span key={i} className="inline-block whitespace-nowrap">
-                        <span className="text-[#D6D2C4]">&amp; </span>
-                        <span className="text-[#888780]">{words[i + 1]}{' '}</span>
-                      </span>
+                      <span key={i} className="text-[#D6D2C4]">&amp;{' '}</span>
                     );
                   }
-
-                  if (i > 0 && words[i - 1] === '&') return null;
 
                   return (
                     <React.Fragment key={i}>
