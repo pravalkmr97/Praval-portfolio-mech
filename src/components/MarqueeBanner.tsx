@@ -23,7 +23,7 @@ const DEFAULT_ITEMS = [
 
 export const MarqueeBanner: React.FC<MarqueeBannerProps> = ({
   items = DEFAULT_ITEMS,
-  speed = 1.5,
+  speed = 0.45,
   direction = 'left',
   className = ''
 }) => {
@@ -35,8 +35,8 @@ export const MarqueeBanner: React.FC<MarqueeBannerProps> = ({
     stiffness: 400
   });
 
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 3], {
-    clamp: false
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 0.35], {
+    clamp: true
   });
 
   // Track scroll velocity
@@ -51,7 +51,7 @@ export const MarqueeBanner: React.FC<MarqueeBannerProps> = ({
     
     // Accelerate slightly on scroll
     if (velocityFactor.get() !== 0) {
-      moveBy += (direction === 'left' ? -1 : 1) * velocityFactor.get() * 0.8;
+      moveBy += (direction === 'left' ? -1 : 1) * velocityFactor.get() * 0.25;
     }
 
     baseX.set(baseX.get() + moveBy);
@@ -63,7 +63,7 @@ export const MarqueeBanner: React.FC<MarqueeBannerProps> = ({
   const repeatedItems = [...items, ...items, ...items, ...items];
 
   return (
-    <div className={`relative w-full overflow-hidden py-4 border-y border-white/5 bg-[#07090E]/80 backdrop-blur-sm select-none ${className}`}>
+    <div className={`relative w-full overflow-hidden py-5 border-y border-white/5 bg-[#07090E]/80 backdrop-blur-sm select-none ${className}`}>
       {/* Edge gradient masks */}
       <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-[#0B0D10] to-transparent z-10 pointer-events-none" />
       <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-[#0B0D10] to-transparent z-10 pointer-events-none" />
@@ -74,7 +74,7 @@ export const MarqueeBanner: React.FC<MarqueeBannerProps> = ({
       >
         {repeatedItems.map((item, idx) => (
           <div key={idx} className="flex items-center gap-8 group cursor-default">
-            <span className="mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#888780] group-hover:text-accent-orange transition-colors duration-300">
+            <span className="mono text-xs leading-6 font-bold uppercase tracking-[0.18em] text-white/65 group-hover:text-accent-orange transition-colors duration-300">
               {item}
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-white/10 group-hover:bg-accent-orange/60 group-hover:scale-125 transition-all duration-300" />
