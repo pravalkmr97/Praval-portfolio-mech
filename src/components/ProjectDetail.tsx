@@ -1341,23 +1341,36 @@ export default function ProjectDetail() {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
           >
-            <motion.div variants={fadeIn} className="lg:col-span-8">
+            <motion.div variants={fadeIn} className="lg:col-span-8 min-w-0">
               <span className="mono text-[#888780] text-[12px] uppercase tracking-[0.3em] mb-4 block">Hardware Engineering Stack // {project.year}</span>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
-                {project.title.split(' ').map((word, i) => (
-                  <span key={i} className={i % 2 === 1 ? 'text-[#888780]' : 'text-[#D6D2C4]'}>
-                    {word}{' '}
-                    {i === 1 && <br className="hidden md:block" />}
-                  </span>
-                ))}
+              <h1 className="max-w-full break-words text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-[0.95] mb-8">
+                {project.title.split(' ').map((word, i, words) => {
+                  if (word === '&') {
+                    return (
+                      <span key={i} className="inline-block whitespace-nowrap">
+                        <span className="text-[#D6D2C4]">&amp; </span>
+                        <span className="text-[#888780]">{words[i + 1]}{' '}</span>
+                      </span>
+                    );
+                  }
+
+                  if (i > 0 && words[i - 1] === '&') return null;
+
+                  return (
+                    <React.Fragment key={i}>
+                      <span className={i % 2 === 1 ? 'text-[#888780]' : 'text-[#D6D2C4]'}>{word}{' '}</span>
+                      {i === 1 && <br className="hidden md:block" />}
+                    </React.Fragment>
+                  );
+                })}
               </h1>
               <p className="text-lg lg:text-xl text-[#888780] font-light leading-relaxed max-w-2xl bg-gradient-to-r from-[#D6D2C4]/90 to-[#D6D2C4]/75 bg-clip-text text-transparent">
                 {project.fullDesc}
               </p>
             </motion.div>
-            <motion.div variants={fadeIn} className="lg:col-span-4 flex justify-end w-full">
+            <motion.div variants={fadeIn} className="lg:col-span-4 flex justify-end w-full min-w-0">
                <div className="glass-card p-6 sm:p-8 rounded-3xl w-full bg-[#121418]/60 border border-[#1A1D22]">
                   <p className="mono text-[10px] uppercase text-[#888780] mb-5 tracking-widest font-bold">● Operational Specifications</p>
                   <div className="space-y-4 sm:space-y-5">
