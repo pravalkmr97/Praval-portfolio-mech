@@ -1,4 +1,9 @@
 import laptopImg from '../assets/images/laptop_card_visual_1782227171686.jpg';
+import laptopConceptSketchImg from '../assets/images/laptop-concept/concept-1.jpg';
+import laptopConceptRenderImg1 from '../assets/images/laptop-concept/concept-2.jpg';
+import laptopConceptRenderImg2 from '../assets/images/laptop-concept/concept-3.jpg';
+import laptopConceptRenderImg3 from '../assets/images/laptop-concept/concept-4.jpg';
+import laptopConceptRenderImg4 from '../assets/images/laptop-concept/concept-5.jpg';
 import ariaCoolingLoopsImg from '../assets/images/slide1_original_cad.webp';
 import blindMateQdsImg from '../assets/images/slide2_original_cad.webp';
 import evPoleCharger1Img from '../assets/images/ev_pole_charger_1.webp';
@@ -139,16 +144,13 @@ export const projectsData: Project[] = [
         title: 'Concept Development', 
         text: 'Allocating the internal volume of a laptop chassis balancing thermal envelopes, structural rigidity, and human interface ergonomics within a highly restricted Z-height.',
         badge1: 'ID Design',
-        image: 'https://lh3.googleusercontent.com/d/1P7UAVe_n0NP-ynzlpJ7uRXcFIvHeOUrH',
+        image: laptopConceptSketchImg,
         images: [
-          'https://lh3.googleusercontent.com/d/1P7UAVe_n0NP-ynzlpJ7uRXcFIvHeOUrH',
-          'https://lh3.googleusercontent.com/d/13DWFGB9ozgNNPL8PQkG-r3S0k7djTn80',
-          'https://lh3.googleusercontent.com/d/1zqIxUNuaKimxAB4HJQVdeFugQMgLk-tN',
-          'https://lh3.googleusercontent.com/d/1qDiot2rjda0_IF6nphrtaGfZ-Tx_Tkft',
-          'https://lh3.googleusercontent.com/d/1g9ABshgeuTyHrVwhTA8WQQrrqIT-mart',
-          'https://lh3.googleusercontent.com/d/1Un1YUiqi85mz3Bam2g5AnbSGClpWyRFY',
-          'https://lh3.googleusercontent.com/d/1Qxwb1C6GaT-a2DK8OBdqXmZFeUxvSFfu',
-          'https://lh3.googleusercontent.com/d/16Fs44hOiajr3rp3kHqjy2hMSA1XB3qdb'
+          laptopConceptSketchImg,
+          laptopConceptRenderImg1,
+          laptopConceptRenderImg2,
+          laptopConceptRenderImg3,
+          laptopConceptRenderImg4
         ]
       },
       { 
