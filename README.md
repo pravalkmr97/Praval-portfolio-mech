@@ -2,6 +2,8 @@
 
 Portfolio site built with React, TypeScript, and Vite.
 
+Live site: https://praval-portfolio-mech.pages.dev
+
 ## Run locally
 
 Requirements: Node.js 20 or newer.
