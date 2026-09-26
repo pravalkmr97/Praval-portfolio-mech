@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, useScroll, useSpring, useTransform } from 'motion/react';
 import { gsap } from 'gsap';
 import Lenis from 'lenis';
 import { 
@@ -28,7 +28,7 @@ import TextReveal from './components/TextReveal';
 import dieCastCapabilityImage from './assets/images/capability-die-cast.webp';
 import npiCapabilityImage from './assets/images/capability-npi-mass-production.png';
 import thermalCapabilityImage from './assets/images/capability-thermal.webp';
-import complianceCapabilityImage from './assets/images/capability-compliance-validation.gif';
+import complianceCapabilityImage from './assets/images/capability-compliance-validation.jpg';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -101,10 +101,38 @@ const capabilities = [
   }
 ];
 
+const capabilityTextReveal = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { staggerChildren: 0.08, delayChildren: 0.04 }
+  },
+  exit: { opacity: 0, y: -12, transition: { duration: 0.25 } }
+};
+
+const capabilityTextItem = {
+  hidden: { opacity: 0, y: 14 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }
+};
+
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeCap, setActiveCap] = useState(capabilities[0]);
   const [activeSection, setActiveSection] = useState('home');
+  const capabilitiesRef = useRef<HTMLElement>(null);
+  const { scrollYProgress: capabilitiesScrollProgress } = useScroll({
+    target: capabilitiesRef,
+    offset: ['start end', 'end start']
+  });
+  const capabilityTextY = useSpring(
+    useTransform(capabilitiesScrollProgress, [0, 1], [36, -36]),
+    { stiffness: 90, damping: 26, mass: 0.8 }
+  );
+  const capabilityImageY = useSpring(
+    useTransform(capabilitiesScrollProgress, [0, 1], [-36, 36]),
+    { stiffness: 90, damping: 26, mass: 0.8 }
+  );
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -685,7 +713,7 @@ function Home() {
         <ProjectShowcase />
 
         {/* CAPABILITIES SECTION */}
-        <section id="capabilities" className="mb-32">
+        <section id="capabilities" ref={capabilitiesRef} className="mb-32">
           <motion.div 
             initial="initial"
             whileInView="animate"
@@ -728,24 +756,25 @@ function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              style={{ y: capabilityTextY }}
               className="lg:col-span-5 glass-card p-10 rounded-xl flex flex-col justify-center relative overflow-hidden"
             >
                <AnimatePresence mode="wait">
                   <motion.div
                     key={activeCap.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.4 }}
+                    variants={capabilityTextReveal}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
                   >
-                    <span className="mono text-accent-orange text-[10px] uppercase tracking-[0.3em] mb-4 block">{activeCap.tag}</span>
-                    <h3 className="text-4xl font-bold uppercase tracking-tighter mb-8 leading-none" dangerouslySetInnerHTML={{ __html: activeCap.title.replace(' ', '<br />') }} />
-                    <p className="text-lg text-white/60 font-light leading-relaxed mb-8">
+                    <motion.span variants={capabilityTextItem} className="mono text-accent-orange text-[10px] uppercase tracking-[0.3em] mb-4 block">{activeCap.tag}</motion.span>
+                    <motion.h3 variants={capabilityTextItem} className="text-4xl font-bold uppercase tracking-tighter mb-8 leading-none" dangerouslySetInnerHTML={{ __html: activeCap.title.replace(' ', '<br />') }} />
+                    <motion.p variants={capabilityTextItem} className="text-lg text-white/60 font-light leading-relaxed mb-8">
                       {activeCap.desc}
-                    </p>
+                    </motion.p>
                     <div className="flex flex-wrap gap-2">
                       {activeCap.pills.map(p => (
-                        <span key={p} className="px-3 py-1 bg-white/5 border border-white/10 rounded text-[10px] mono text-white/40 uppercase">{p}</span>
+                        <motion.span key={p} variants={capabilityTextItem} className="px-3 py-1 bg-white/5 border border-white/10 rounded text-[10px] mono text-white/40 uppercase">{p}</motion.span>
                       ))}
                     </div>
                   </motion.div>
@@ -758,6 +787,7 @@ function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 1, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+              style={{ y: capabilityImageY }}
               className="lg:col-span-4 glass-card rounded-xl relative isolate min-h-[360px] lg:min-h-[500px] overflow-hidden bg-black/20"
             >
                <AnimatePresence mode="wait">
