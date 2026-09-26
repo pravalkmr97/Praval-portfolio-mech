@@ -25,6 +25,10 @@ import OrbitingSkillsCursor from './components/OrbitingSkillsCursor';
 import ProjectShowcase from './components/ProjectShowcase';
 import MarqueeBanner from './components/MarqueeBanner';
 import TextReveal from './components/TextReveal';
+import dieCastCapabilityImage from './assets/images/capability-die-cast.webp';
+import npiCapabilityImage from './assets/images/capability-npi-mass-production.png';
+import thermalCapabilityImage from './assets/images/capability-thermal.webp';
+import complianceCapabilityImage from './assets/images/capability-compliance-validation.gif';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -59,6 +63,7 @@ const capabilities = [
     title: 'Thermal Systems Design',
     desc: 'Advanced thermal management for high-density compute. Specializing in liquid cooling architectures (OCP ORv3) and managing 4.6kW+ TDP systems through rigorous CFD and ANSYS validation.',
     pills: ['High-Density Cooling', 'Liquid Cooling', 'CFD Analysis'],
+    image: thermalCapabilityImage,
     icon: <Zap className="w-12 h-12 text-accent-orange opacity-40" />
   },
   {
@@ -69,6 +74,7 @@ const capabilities = [
     title: 'Enclosure Engineering',
     desc: 'Structural design for harsh environments and consumer markets. Expertise in complex die casting, precision sheet metal, and injection molding for 5G RRUs, server chassis, and laptops.',
     pills: ['Die Casting', 'Sheet Metal', 'IP67 Enclosures'],
+    image: dieCastCapabilityImage,
     icon: <Layers className="w-12 h-12 text-accent-orange opacity-40" />
   },
   {
@@ -79,6 +85,7 @@ const capabilities = [
     title: 'NPI & Mass Production',
     desc: 'Taking concepts to the factory floor. Proven track record in cost-down engineering (sub-$18 MBOM targets), global vendor management, and end-to-end product lifecycle ownership.',
     pills: ['Cost Optimization', 'DFM/DFA', 'Supply Chain'],
+    image: npiCapabilityImage,
     icon: <Cpu className="w-12 h-12 text-accent-orange opacity-40" />
   },
   {
@@ -89,6 +96,7 @@ const capabilities = [
     title: 'Compliance & Validation',
     desc: 'Rigorous testing for mission-critical hardware. SVTP validation, GR-487-CORE environmental testing, and managing certifications for global market entry.',
     pills: ['SVTP Validation', 'GR-487-CORE', 'IEC 60068-2'],
+    image: complianceCapabilityImage,
     icon: <ShieldCheck className="w-12 h-12 text-accent-orange opacity-40" />
   }
 ];
@@ -733,7 +741,7 @@ function Home() {
             </div>
 
             {/* Visual Display */}
-            <div className="lg:col-span-4 glass-card p-10 rounded-xl flex items-center justify-center bg-black/20">
+            <div className="lg:col-span-4 glass-card p-5 sm:p-8 rounded-xl flex items-center justify-center bg-black/20 min-h-[360px] overflow-hidden">
                <AnimatePresence mode="wait">
                   <motion.div
                     key={activeCap.id}
@@ -741,8 +749,14 @@ function Home() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 1.1 }}
                     transition={{ duration: 0.4 }}
+                    className="w-full h-full flex items-center justify-center"
                   >
-                    {activeCap.icon}
+                    <img
+                      src={activeCap.image}
+                      alt={`${activeCap.title} capability`}
+                      className="w-full max-h-[420px] object-contain rounded-lg"
+                      loading="lazy"
+                    />
                   </motion.div>
                </AnimatePresence>
             </div>
