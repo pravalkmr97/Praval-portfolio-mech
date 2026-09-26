@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "A mechanical engineering project in the portfolio",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "slug": { "type": "string" },
+        "title": { "type": "string" },
+        "year": { "type": "string" },
+        "desc": { "type": "string" },
+        "fullDesc": { "type": "string" },
+        "challenge": { "type": "string" },
+        "tags": { 
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "image": { "type": "string" },
+        "stats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": { "type": "string" },
+              "value": { "type": "string" }
+            }
+          }
+        },
+        "specs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "text": { "type": "string" },
+              "image": { "type": "string" }
+            }
+          }
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": { "type": "string" },
+              "value": { "type": "string" }
+            }
+          }
+        }
+      },
+      "required": ["slug", "title", "year", "image"]
+    }
+  },
+  "firestore": {
+    "projects": {
+      "schema": "Project",
+      "description": "Collection of engineering projects"
+    }
+  }
+}

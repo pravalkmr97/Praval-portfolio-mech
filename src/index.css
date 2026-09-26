@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&family=DM+Mono:wght@300;400;500;700&display=swap');
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Georgia", serif;
+  
+  --color-accent-orange: #FFFFFF; /* Monochrome active white */
+  --color-accent-copper: #D6D2C4; /* Monochrome silver/bone */
+  --color-accent-sage: #888780;
+  --color-accent-blue: #1A1D22;
+  
+  --color-brand-bone: #FFFFFF; /* High-contrast white for text */
+  --color-brand-ash: #888780;
+  --color-brand-ink: #050608; /* Deep matte black from reference image */
+  --color-brand-slate: #0B0D10; /* Dark slate */
+  --color-brand-steel: #1A1D22; /* Gray borders */
+  
+  --color-surface-bg: #050608;
+  --color-surface-card: rgba(11, 13, 16, 0.75);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-ink text-brand-bone font-sans antialiased selection:bg-accent-copper/20;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-black uppercase tracking-[0.15em] leading-[0.9] text-white;
+  }
+
+  em {
+    @apply font-serif italic;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-brand-slate/75 backdrop-blur-xl border border-brand-steel/80 transition-all duration-300;
+  }
+  
+  .glass-card:hover {
+    @apply border-accent-copper/30 bg-brand-slate/90 shadow-[0_12px_40px_rgba(0,0,0,0.65)];
+  }
+
+  .mono {
+    @apply font-mono;
+  }
+  
+  .display {
+    @apply font-display;
+  }
+
+  /* Scrollbar hiding utilities */
+  .scrollbar-none::-webkit-scrollbar,
+  .no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .scrollbar-none,
+  .no-scrollbar {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+}
+
+/* Dynamic Monochrome Color Fallbacks for Residual Copper Inline Colors */
+[class*="text-[#8A5A3C]"] {
+  color: #FFFFFF !important;
+}
+[class*="group-hover:text-[#8A5A3C]"] {
+  --tw-text-opacity: 1;
+}
+.group:hover [class*="group-hover:text-[#8A5A3C]"] {
+  color: #FFFFFF !important;
+}
+
+[class*="bg-[#8A5A3C]"] {
+  background-color: #FFFFFF !important;
+}
+[class*="bg-[#8A5A3C]/10"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+[class*="bg-[#8A5A3C]/15"] {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+[class*="bg-[#8A5A3C]/5"] {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+[class*="bg-[#8A5A3C]/95"] {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+[class*="border-[#8A5A3C]"] {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+[class*="border-[#8A5A3C]/20"] {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+[class*="border-[#8A5A3C]/30"] {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+[class*="border-[#8A5A3C]/40"] {
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+[class*="hover:border-[#8A5A3C]"]:hover {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+[class*="hover:text-[#8A5A3C]"]:hover {
+  color: #FFFFFF !important;
+}
+[class*="hover:bg-[#8A5A3C]"]:hover {
+  background-color: #FFFFFF !important;
+  color: #050608 !important;
+}
+.group:hover [class*="group-hover:border-[#8A5A3C]"] {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+.group:hover [class*="group-hover:bg-[#8A5A3C]"] {
+  background-color: #FFFFFF !important;
+  color: #050608 !important;
+}
+
+/* Orbiting / Glowing Accents mapping */
+[class*="bg-[#8A5A3C]"][class*="shadow-"] {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.35) !important;
+}
+[class*="shadow-[0_0_8px_rgba(138,90,60,0.4)]"] {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2) !important;
+}
+[class*="shadow-[0_0_10px_rgba(138,90,60,0.3)]"] {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2) !important;
+}
+[class*="shadow-[0_0_15px_rgba(138,90,60,0.5)]"] {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Custom compact card roundings mapping for a cleaner industrial look */
+.rounded-3xl, 
+.rounded-\[2\.5rem\], 
+.rounded-\[2rem\], 
+.rounded-\[3rem\], 
+.rounded-\[1\.8rem\],
+.rounded-2xl {
+  border-radius: var(--radius-xl, 12px) !important;
+}
+

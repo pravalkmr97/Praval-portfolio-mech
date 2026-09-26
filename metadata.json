@@ -1,0 +1,8 @@
+{
+  "name": "Praval Kumar Portfolio",
+  "description": "Premium industrial engineering portfolio featuring a custom scroll-animated technical timeline, Firebase integration, and advanced bento-grid layouts. Specialized for hardware and thermal design showcases.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

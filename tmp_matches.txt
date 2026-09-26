@@ -1,0 +1,69 @@
+229:            <span className="mono text-[10px] text-[#FA6E43] uppercase tracking-[0.25em] font-bold">
+247:            <div className="flex justify-between items-center text-[10px] uppercase tracking-wider text-[#FA6E43] font-semibold pb-2">
+265:              <span className="text-[#FA6E43] font-semibold font-mono">
+285:              className="absolute inset-x-0 top-[10%] h-[90%] w-full rounded-2xl overflow-hidden border border-[#1A1D22] bg-[#121418] shadow-2xl cursor-zoom-in group hover:border-[#FA6E43]/60 transition-all duration-300"
+298:                <span className="mono text-[7px] text-[#FA6E43] uppercase tracking-wider font-extrabold">PRMY</span>
+308:              className="absolute inset-x-0 top-0 h-[46%] w-full rounded-2xl overflow-hidden border border-[#1A1D22] bg-[#121418] shadow-2xl cursor-zoom-in group hover:border-[#FA6E43]/60 transition-all duration-300"
+328:              className="absolute inset-x-0 bottom-[5%] h-[46%] w-full rounded-2xl overflow-hidden border border-[#1A1D22] bg-[#121418] shadow-2xl cursor-zoom-in group hover:border-[#FA6E43]/60 transition-all duration-300"
+348:            <span className="w-1.5 h-1.5 bg-[#FA6E43] rounded-full animate-pulse" />
+361:              className="w-10 h-10 rounded-full bg-[#0B0D10]/95 hover:bg-[#FA6E43] border border-[#1A1D22] hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] flex items-center justify-center transition-all duration-300 pointer-events-auto cursor-pointer shadow-lg active:scale-90 group/btn"
+368:              className="w-10 h-10 rounded-full bg-[#0B0D10]/95 hover:bg-[#FA6E43] border border-[#1A1D22] hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] flex items-center justify-center transition-all duration-300 pointer-events-auto cursor-pointer shadow-lg active:scale-90 group/btn"
+386:                    ? 'border-[#FA6E43] ring-2 ring-[#FA6E43]/20 scale-105 opacity-100'
+423:                <span className="w-2 h-2 bg-[#FA6E43] rounded-full animate-pulse" />
+445:                  className="w-12 h-12 rounded-full bg-[#0B0D10]/90 hover:bg-[#FA6E43] border border-[#1A1D22] hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] flex items-center justify-center transition-all duration-300 pointer-events-auto cursor-pointer shadow-2xl active:scale-95 group/modal-btn"
+455:                  className="w-12 h-12 rounded-full bg-[#0B0D10]/90 hover:bg-[#FA6E43] border border-[#1A1D22] hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] flex items-center justify-center transition-all duration-300 pointer-events-auto cursor-pointer shadow-2xl active:scale-95 group/modal-btn"
+475:                      ? 'border-[#FA6E43] ring-4 ring-[#FA6E43]/20 scale-105' 
+569:          <Layers className="w-4 h-4 text-[#FA6E43] animate-pulse" />
+583:          className="bento-showcase-card group relative rounded-[2rem] border border-[#1A1D22] bg-[#0B0D10]/95 overflow-hidden transition-all duration-500 hover:border-[#FA6E43]/45 hover:shadow-[0_25px_60px_rgba(250,110,67,0.08)] cursor-zoom-in h-[320px] sm:h-[420px] md:h-[500px] w-full"
+605:            <span className="mono text-[9px] md:text-xs bg-[#FA6E43] border border-[#FA6E43]/50 px-3 py-1 rounded-full text-white font-bold tracking-widest uppercase">
+609:            <div className="grid grid-cols-4 gap-[3px] w-4 h-4 text-white/30 group-hover:text-[#FA6E43]/80 transition-colors">
+619:              <span className="w-2 h-2 rounded-full bg-[#FA6E43] shrink-0 animate-pulse" />
+630:            <div className="absolute right-6 md:right-8 bottom-6 md:bottom-8 w-10 h-10 rounded-xl bg-[#FA6E43]/10 border border-[#FA6E43]/35 text-[#FA6E43] group-hover:bg-[#FA6E43] group-hover:text-white transition-all duration-300 flex items-center justify-center shadow-lg">
+648:                className="bento-showcase-card break-inside-avoid mb-6 group relative rounded-[2rem] border border-[#1A1D22] bg-[#0B0D10]/95 overflow-hidden transition-all duration-500 hover:border-[#FA6E43]/45 hover:shadow-[0_20px_50px_rgba(250,110,67,0.06)] cursor-zoom-in"
+675:                  <div className="grid grid-cols-3 gap-[3px] w-3 h-3 text-[#D6D2C4]/25 group-hover:text-[#FA6E43]/80 transition-colors">
+685:                    <span className="w-1.5 h-1.5 rounded-full bg-[#FA6E43] shrink-0" />
+692:                  <div className="absolute right-5 bottom-5 w-7 h-7 rounded-lg bg-[#FA6E43]/10 border border-[#FA6E43]/30 text-[#FA6E43] group-hover:bg-[#FA6E43] group-hover:text-white transition-all duration-300 flex items-center justify-center shadow-md">
+720:                <span className="mono text-[9px] uppercase tracking-widest text-[#FA6E43] font-semibold flex items-center gap-2">
+721:                  <span className="w-1.5 h-1.5 rounded-full bg-[#FA6E43] animate-ping" />
+736:                  className="px-4 py-1.5 bg-[#121418] hover:bg-[#FA6E43]/10 border border-[#1A1D22] hover:border-[#FA6E43]/40 text-[#888780] hover:text-[#D6D2C4] rounded-lg mono text-[9px] uppercase tracking-wider cursor-pointer transition-colors"
+757:                className="absolute left-0 lg:-left-20 xl:-left-24 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#1A1D22] bg-[#0B0D10]/85 hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] transition-all flex items-center justify-center cursor-pointer group shadow-[0_15px_30px_rgba(0,0,0,0.5)] z-20"
+781:                    <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#FA6E43]/40" />
+782:                    <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#FA6E43]/40" />
+783:                    <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#FA6E43]/40" />
+784:                    <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#FA6E43]/40" />
+806:                className="absolute right-0 lg:-right-20 xl:-right-24 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#1A1D22] bg-[#0B0D10]/85 hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] transition-all flex items-center justify-center cursor-pointer group shadow-[0_15px_30px_rgba(0,0,0,0.5)] z-20"
+816:                  <span className="mono text-[8px] tracking-[0.25em] text-[#FA6E43] uppercase font-bold bg-[#FA6E43]/15 border border-[#FA6E43]/20 px-2 py-0.5 rounded">
+837:                        ? 'border-[#FA6E43] scale-110 shadow-[0_0_8px_rgba(250,110,67,0.4)] ring-2 ring-[#FA6E43]/30' 
+995:      className="relative w-full h-[400px] sm:h-[460px] flex flex-col items-center justify-between bg-[#0B0D10]/20 rounded-[2.5rem] border border-[#1A1D22]/50 overflow-hidden p-6 hover:border-[#FA6E43]/30 transition-all duration-500"
+1002:          <span className="w-1.5 h-1.5 bg-[#FA6E43] rounded-full animate-pulse" />
+1006:          <span className="text-[#FA6E43] font-semibold">{String(currentIndex + 1).padStart(2, '0')}</span> / {String(images.length).padStart(2, '0')}
+1016:          className="absolute w-[80%] aspect-video rounded-2xl overflow-hidden border border-[#1A1D22] bg-[#121418] shadow-2xl origin-bottom cursor-zoom-in transition-all duration-500 hover:border-[#FA6E43]/40 z-10 hover:z-30 group"
+1036:          className="absolute w-[88%] aspect-video rounded-2xl overflow-hidden border-2 border-[#1A1D22] bg-[#0B0D10] shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-20 cursor-zoom-in hover:border-[#FA6E43] group transition-all duration-300"
+1048:            <span className="mono text-[8px] text-[#D6D2C4] bg-[#FA6E43]/95 px-2.5 py-0.5 rounded border border-[#1a1d22] font-semibold tracking-wider">PRIMARY SPEC</span>
+1057:          className="absolute w-[80%] aspect-video rounded-2xl overflow-hidden border border-[#1A1D22] bg-[#121418] shadow-2xl origin-bottom cursor-zoom-in transition-all duration-500 hover:border-[#FA6E43]/40 z-10 hover:z-30 group"
+1078:            className="w-8 h-8 rounded-full bg-[#0B0D10]/90 hover:bg-[#FA6E43] border border-[#1A1D22] hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] flex items-center justify-center transition-all duration-300 pointer-events-auto cursor-pointer shadow-lg active:scale-90 group/btn"
+1085:            className="w-8 h-8 rounded-full bg-[#0B0D10]/90 hover:bg-[#FA6E43] border border-[#1A1D22] hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] flex items-center justify-center transition-all duration-300 pointer-events-auto cursor-pointer shadow-lg active:scale-90 group/btn"
+1102:                  ? 'border-[#FA6E43] scale-105 shadow-[0_0_10px_rgba(250,110,67,0.3)]' 
+1119:          <span className="inline-block w-1 h-1 bg-[#FA6E43] rotate-45" /> Drag or click thumbnail to dock item
+1148:                <span className="w-2 h-2 bg-[#FA6E43] rounded-full animate-pulse" />
+1171:                  className="w-12 h-12 rounded-full bg-[#0B0D10]/90 hover:bg-[#FA6E43] border border-[#1A1D22] hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] flex items-center justify-center transition-all duration-300 pointer-events-auto cursor-pointer shadow-2xl active:scale-95 group/modal-btn"
+1182:                  className="w-12 h-12 rounded-full bg-[#0B0D10]/90 hover:bg-[#FA6E43] border border-[#1A1D22] hover:border-[#FA6E43] text-[#888780] hover:text-[#D6D2C4] flex items-center justify-center transition-all duration-300 pointer-events-auto cursor-pointer shadow-2xl active:scale-95 group/modal-btn"
+1203:                      ? 'border-[#FA6E43] ring-4 ring-[#FA6E43]/20 scale-105' 
+1241:          <Link to="/" className="text-[#FA6E43] hover:text-[#FA6E43]/85 transition-colors mono uppercase tracking-widest border-b border-[#FA6E43] pb-1">Return Home</Link>
+1255:            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform text-[#FA6E43]" />
+1259:            <span className="mono text-[10px] text-[#FA6E43] uppercase tracking-widest font-bold bg-[#FA6E43]/10 px-3 py-1 rounded-full border border-[#FA6E43]/20">{project.category}</span>
+1295:                        <span className="text-2xl font-black text-[#FA6E43]">{stat.value}</span>
+1332:            <span className="mono text-[#FA6E43] text-[10px] uppercase tracking-[0.2em] block font-bold">● System Telemetry Configurator</span>
+1341:                  ? 'bg-[#FA6E43] text-[#D6D2C4] shadow-md' 
+1352:                  ? 'bg-[#FA6E43] text-[#D6D2C4] shadow-md' 
+1370:              <span className="mono text-xs text-[#FA6E43] hidden lg:inline-block">/ Architectural Lifecycle Spectrum</span>
+1388:                    className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-[#FA6E43] -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(250,110,67,0.5)]" 
+1402:                        <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 rounded-full bg-[#0B0D10] border-2 border-[#FA6E43] -translate-x-1/2 z-20 shadow-[0_0_10px_rgba(250,110,67,0.3)]" />
+1408:                            className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#FA6E43]/10 border border-[#FA6E43]/20 mb-8 ${i % 2 === 0 ? 'md:ml-auto' : ''}`}
+1410:                            {i === 0 && <Cpu className="w-7 h-7 text-[#FA6E43]" />}
+1411:                            {i === 1 && <Layers className="w-7 h-7 text-[#FA6E43]" />}
+1412:                            {i === 2 && <ShieldCheck className="w-7 h-7 text-[#FA6E43]" />}
+1413:                            {i === 3 && <DraftingCompass className="w-7 h-7 text-[#FA6E43]" />}
+1414:                            {i > 3 && <Zap className="w-7 h-7 text-[#FA6E43]" />}
+1428:                             <span className="mono text-[10px] uppercase px-3 py-1 bg-[#FA6E43]/10 border border-[#FA6E43]/20 rounded-full text-[#FA6E43] font-semibold">Precision Assembly</span>
+1479:                    <p className="text-5xl font-black text-[#FA6E43] mb-2">{res.value}</p>
