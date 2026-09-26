@@ -1343,7 +1343,7 @@ export default function ProjectDetail() {
             variants={staggerContainer}
             className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
           >
-            <motion.div variants={fadeIn} className="lg:col-span-8 min-w-0">
+            <motion.div variants={fadeIn} className="lg:col-span-9 min-w-0">
               <span className="mono text-[#888780] text-[12px] uppercase tracking-[0.3em] mb-4 block">Hardware Engineering Stack // {project.year}</span>
               <h1 className="max-w-full break-words text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-[0.95] mb-8">
                 {project.title.split(' ').map((word, i, words) => {
@@ -1370,7 +1370,7 @@ export default function ProjectDetail() {
                 {project.fullDesc}
               </p>
             </motion.div>
-            <motion.div variants={fadeIn} className="lg:col-span-4 flex justify-end w-full min-w-0">
+            <motion.div variants={fadeIn} className="lg:col-span-3 flex justify-end w-full min-w-0">
                <div className="glass-card p-6 sm:p-8 rounded-3xl w-full bg-[#121418]/60 border border-[#1A1D22]">
                   <p className="mono text-[10px] uppercase text-[#888780] mb-5 tracking-widest font-bold">● Operational Specifications</p>
                   <div className="space-y-4 sm:space-y-5">
