@@ -699,7 +699,13 @@ function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[500px]">
             {/* Index Column */}
-            <div className="lg:col-span-3 glass-card p-8 rounded-xl flex flex-col justify-center space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: -48 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-3 glass-card p-8 rounded-xl flex flex-col justify-center space-y-8"
+            >
               {capabilities.map((cap) => (
                 <button 
                   key={cap.id}
@@ -714,10 +720,16 @@ function Home() {
                   </span>
                 </button>
               ))}
-            </div>
+            </motion.div>
 
             {/* Content Display */}
-            <div className="lg:col-span-5 glass-card p-10 rounded-xl flex flex-col justify-center relative overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, x: -56 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-5 glass-card p-10 rounded-xl flex flex-col justify-center relative overflow-hidden"
+            >
                <AnimatePresence mode="wait">
                   <motion.div
                     key={activeCap.id}
@@ -738,28 +750,34 @@ function Home() {
                     </div>
                   </motion.div>
                </AnimatePresence>
-            </div>
+            </motion.div>
 
             {/* Visual Display */}
-            <div className="lg:col-span-4 glass-card p-5 sm:p-8 rounded-xl flex items-center justify-center bg-black/20 min-h-[360px] overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, x: 56 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-4 glass-card rounded-xl relative isolate min-h-[360px] lg:min-h-[500px] overflow-hidden bg-black/20"
+            >
                <AnimatePresence mode="wait">
                   <motion.div
                     key={activeCap.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 1.04 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 1.1 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-full h-full flex items-center justify-center"
+                    exit={{ opacity: 0, scale: 1.02 }}
+                    transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute inset-0"
                   >
                     <img
                       src={activeCap.image}
                       alt={`${activeCap.title} capability`}
-                      className="w-full max-h-[420px] object-contain rounded-lg"
+                      className="absolute inset-0 w-full h-full object-cover object-center"
                       loading="lazy"
                     />
                   </motion.div>
                </AnimatePresence>
-            </div>
+            </motion.div>
           </div>
         </section>
 
